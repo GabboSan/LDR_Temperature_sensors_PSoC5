@@ -1,0 +1,10 @@
+; Start the REG0 with 5 samples, and sample both channels (0b000101011 = 17)
+w 08 00 17 p 
+w 08 00 r 08 x p 
+
+; Print the four addresses to get the values in Volts measures 
+w 08 03 r 08 @1TRM @0TRM @1LDR @0LDR p
+
+; Change REG0 and REG1 according to the need.
+; w 08 00 # p 
+; w 08 01 # p 
